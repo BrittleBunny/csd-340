@@ -5,8 +5,8 @@ margin-top: 50px;
 }
 
 h1, h2, h3, h4 {
-background-color: #66ff66;
-  color: #CE84C6;
+background-color: #E0FFFF;
+  color: #FFB6C1;
   border: 1px solid #D6A800;
 }
 
@@ -16,9 +16,9 @@ color: #8FBC8F;
 }
 
 a:hover {
-  color: #FAFAD2;
+  color: #E0FFFF;
 }
 
 a:visited {
-  color: #006400;
+  color: #90EE90;
 }
