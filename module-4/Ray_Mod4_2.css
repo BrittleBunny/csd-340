@@ -1,0 +1,37 @@
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+}
+
+#leftbox, #rightbox, #middlebox {
+    border: 1px solid black;
+}
+
+h1,
+h3, figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+h1 {
+    color: rgb(0, 181, 66);
+    /* Red color */
+}
+
+h3 {
+    color: rgba(77, 186, 77, 0.786);
+    /* Green color */
+}
+
+figcaption {
+    color: rgb(0, 51, 5);
+    /* Blue color */
+}
+figure {
+    text-align: center;
+}
