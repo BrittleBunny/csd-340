@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+   Professor Sue Sampson
+   Assignment 9.3
+-->
+  <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+      var wordOne = "snow";
+      var wordTwo = "wind";
+      var wordThree = "woods";
+      var wordFour = "death";
+    </script>
+  </head>
+
+  <body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <p>
+      "The forest had become a labyrinth of <span id="snow">____</span> and
+      ice."
+    </p>
+    <p>
+      "I’d been monitoring the parameters of the thicket for an hour, and my
+      vantage point in the crook of a tree branch had turned useless. The
+      gusting <span id="wind">____</span> blew thick flurries to sweep away my
+      tracks, but buried along with them any signs of potential quarry."
+    </p>
+    <p>
+      "Hunger had brought me farther from home than I usually risked, but winter
+      was the hard time. The animals had pulled in, going deeper into the
+      <span id="woods">_____</span>
+      than I could follow, leaving me to pick off stragglers one by one, praying
+      they’d last until spring. They hadn’t."
+    </p>
+    <p>
+      "I wiped my numb fingers over my eyes, brushing away the flakes clinging
+      to my lashes. Here there were no telltale trees stripped of bark to mark
+      the deer’s passing—they hadn’t yet moved on. They would remain until the
+      bark ran out, then travel north past the wolves’ territory and perhaps
+      into the faerie lands of Prythian—where no mortals would dare go, not
+      unless they had a <span id="death">_____</span> wish."
+    </p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('snow').innerHTML = wordOne"
+    >
+      snow
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('wind').innerHTML = wordTwo"
+    >
+      wind
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('woods').innerHTML = wordThree"
+    >
+      woods
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('death').innerHTML = wordFour"
+    >
+      death
+    </button>
+  </body>
+</html>
