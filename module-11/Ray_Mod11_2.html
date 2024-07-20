@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+      let entries = [];
+
+      function addEntry() {
+        let entry = document.getElementById("entryText").value;
+        entries.push(entry);
+        alert(`"${entry}" has been added to this list!`);
+      }
+
+      function deleteLastEntry() {
+        if (entries.length > 0) {
+          let deletedEntry = entries.pop();
+          alert(`"${deletedEntry}" was deleted from this list!`);
+        } else {
+          alert("The list is currently empty!");
+        }
+      }
+
+      function displayEntries() {
+        let displayArea = document.getElementById("displayArea");
+        displayArea.innerHTML = "";
+
+        for (let i = 0; i < entries.length; i++) {
+          let listItem = document.createElement("li");
+          listItem.textContent = `${i + 1}. ${entries[i]}`;
+          displayArea.appendChild(listItem);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>
+      This is an interactive list, add items, display them, or delete the last
+      entry if you wish!
+    </p>
+
+    <label for="entryText">Enter Text:</label>
+    <input type="text" id="entryText" />
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <ul id="displayArea"></ul>
+  </body>
+</html>
