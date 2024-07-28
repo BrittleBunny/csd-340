@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Ray_Mod12_2.css" type="text/css" />
+    <style>
+      button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 style="text-align: center">Assignment 12.2: JavaScript - Part 4</h1>
+      <div id="left" style="width: 45%; float: left">
+        <h3 id="orderedList">Top 10 Favorite Books</h3>
+        <ol id="bookList"></ol>
+        <button onclick="sortTopToBottom()">Top to Bottom</button>
+        <button onclick="sortBottomToTop()">Bottom to Top</button>
+      </div>
+      <div id="right" style="width: 45%; float: right">
+        <h3>5 Things I’ve Learned Since the Course Started</h3>
+        <ul>
+          <li>How to connect css to html</li>
+          <li>How to check code via validator</li>
+          <li>How to create unordered lists</li>
+          <li>How to initialize doc type</li>
+          <li>How to change font colors</li>
+        </ul>
+      </div>
+      <div id="middle" style="width: 100%; margin-top: 60%"></div>
+      <div id="last">
+        <a style="float: right" href="https://brittlebunny.github.io/csd-340/"
+          >Back to Landing Page</a
+        >
+      </div>
+    </div>
+
+    <script>
+      // Array of book titles
+      const books = [
+        "A Court of Thorns and Roses",
+        "A Court of Mists and Fury",
+        "A Court of Silver Flames",
+        "The Hunger Games: Catching Fire",
+        "The Hunger Games",
+        "The Hunger Games: Mockingjay",
+        "A Court of Wings and Ruin",
+        "Harry Potter and the Goblet of Fire",
+        "A Ballad of Snakes and Songbirds",
+        "Game of Thrones",
+      ];
+
+      function sortTopToBottom() {
+        const sortedBooks = [...books].sort();
+        displayBooks(sortedBooks);
+      }
+
+      function sortBottomToTop() {
+        const sortedBooks = [...books].sort().reverse();
+        displayBooks(sortedBooks);
+      }
+
+      function displayBooks(bookArray) {
+        const bookList = document.getElementById("bookList");
+        bookList.innerHTML = "";
+        bookArray.forEach((book) => {
+          const li = document.createElement("li");
+          li.textContent = book;
+          bookList.appendChild(li);
+        });
+      }
+
+      displayBooks(books);
+    </script>
+  </body>
+</html>
